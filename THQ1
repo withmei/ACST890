@@ -1,0 +1,32 @@
+
+/*Question1 : fibonacci */
+  
+  fibo <- function(n){
+    fibo1 = 1
+    fibo2 = 1
+    for(i in 3:n){
+      tmp = fibo1+fibo2
+      fibo1 = fibo2
+      fibo2 = tmp
+    }
+    return(fibo2)
+  }
+  
+  fibo(n)
+  
+  /*Question3 : plots */
+    
+    /*Q3-A*/
+  dataset= read.csv("/Users/soojng/Desktop/PersonenSchaden.csv", header = T)
+  summary(dataset$total)
+  head(dataset)
+  
+    /*Q3-B*/
+    mean(dataset$total)
+    var(dataset$total)
+    sd(dataset$total)
+    max(dataset$total)
+    min(dataset$total)
+    median(dataset$total)
+    quantile(dataset$total,0.25)
+    quantile(dataset$total,0.75)
